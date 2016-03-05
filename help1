@@ -1,0 +1,65 @@
+int main()
+
+{
+	int num1, num2, num3;// inputed numbers
+	int small =0; //final numbers which are alphabatized
+	int med = 0;
+	int large = 0;
+	
+	cout << "Please enter three integer values: ";
+	cin >> num1 >> num2 >> num3;
+		cout << "\n"<< num1 <<" "<< num2 << " " << num3 <<"\n";
+		
+
+		if ((num1 >= num2) && (num1>=num3))
+		{
+			num1 = large;
+				if (num2>=num3)		//This if statement produces numerically starting with num1
+				{
+					num2 = med;
+					num3 = small;
+				}
+				else {
+					num3 = med;
+					num2 = small;
+
+				}
+				cout << "Your numbers in order are ... " << large << " " << med << " " << small << "\n";
+		}
+		if ((num2 >= num1) && (num2 >= num3)) //These if statements produce numerical order with num 2
+		{
+			num2 = large;
+			if (num1>=num3)
+			{
+				num1 = med;
+				num3 = small;
+
+			}
+			else
+			{
+				num3 = med;
+				num1 = small;
+			
+			}
+			cout << "Your numbers in order are ... " << large << " " << med << " " << small << "\n";
+		}
+
+		if ((num3 >= num1) && (num3 >= num2)){
+			num3 = large;
+			if (num1 >= num2){
+				num1 = med;
+					num2 = small;
+			}
+			else {
+				num1 = small;
+				num2 = med;
+
+			}
+
+			cout << "Your numbers in order are ... " << large << " " << med << " " << small << "\n";
+		}
+
+		
+
+
+}
